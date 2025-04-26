@@ -1,67 +1,48 @@
-@extends('layouts.app')
-
-@section('content')
-<!-- ***** Services Section Start ***** -->
-<section id="services" class="services section">
-    <div class="container">
-        <div class="row">
-            <div class="col-12 text-center">
-                <h2 class="section-title">Our Services</h2>
-                <p class="section-description">We offer a variety of services to help you succeed in the digital world.</p>
-            </div>
-        </div>
-
-        <div class="row">
-            <!-- Service 1 -->
-            <div class="col-lg-4 col-md-6">
-                <div class="single-service-box">
-                    <i class="fa fa-cogs service-icon"></i>
-                    <h4>App Development</h4>
-                    <p>We build fully responsive and robust mobile and web applications tailored to your business needs.</p>
+<div class="tm-bg-video">
+    <div class="overlay">
+        <i class="fa fa-5x fa-play-circle tm-btn-play"></i>
+        <i class="fa fa-5x fa-pause-circle tm-btn-pause"></i>
+    </div>
+    <video controls="" loop="" class="tmVideo">
+        <source src="{{ asset('videos/video.mp4') }}" type="video/mp4">
+        <source src="{{ asset('videos/video.ogg') }}" type="video/ogg">
+        Your browser does not support the video tag.
+    </video>
+    <div class="tm-section tm-section-pad tm-bg-img" id="tm-section-5">
+        <div class="container ie-h-align-center-fix">
+            <div class="row tm-flex-align-center">
+                <div class="col-xs-12 col-md-12 col-lg-3 col-xl-3 tm-media-title-container">
+                    <h2 class="text-uppercase tm-section-title-2">ASIA</h2>
+                    <h3 class="tm-color-primary tm-font-semibold tm-section-subtitle-2">Singapore</h3>
                 </div>
-            </div>
-
-            <!-- Service 2 -->
-            <div class="col-lg-4 col-md-6">
-                <div class="single-service-box">
-                    <i class="fa fa-paint-brush service-icon"></i>
-                    <h4>UI/UX Design</h4>
-                    <p>Our design team crafts seamless and intuitive user interfaces to ensure the best experience for your users.</p>
-                </div>
-            </div>
-
-            <!-- Service 3 -->
-            <div class="col-lg-4 col-md-6">
-                <div class="single-service-box">
-                    <i class="fa fa-cloud service-icon"></i>
-                    <h4>Cloud Solutions</h4>
-                    <p>We provide cloud-based solutions for scalable and flexible infrastructure, enabling your app to grow with ease.</p>
+                <div class="col-xs-12 col-md-12 col-lg-9 col-xl-9 mt-0 mt-sm-3">
+                    <div class="ml-auto tm-bg-white-shadow tm-pad tm-media-container">
+                        <article class="media tm-margin-b-20 tm-media-1">
+                            <img src="{{ asset('img/img-03.jpg') }}" alt="Image">
+                            <div class="media-body tm-media-body-1 tm-media-body-v-center">
+                                <h3 class="tm-font-semibold tm-color-primary tm-article-title-3">Suspendisse vel est libero sem phasellus ac laoreet</h3>
+                                <p>Vivamus eget tellus ornare, sollicitudin quam id, dictum nulla. Phasellus finibus rhoncus justo, tempus eleifend neque dictum ac.</p>
+                            </div>
+                        </article>
+                        <article class="media tm-margin-b-20 tm-media-1">
+                            <img src="{{ asset('img/img-04.jpg') }}" alt="Image">
+                            <div class="media-body tm-media-body-1 tm-media-body-v-center">
+                                <h3 class="tm-font-semibold tm-article-title-3">Suspendisse vel est libero sem phasellus ac laoreet</h3>
+                                <p>Duis accumsan sagittis tortor in ultrices. Praesent tortor ante, fringilla ac nibh porttitor, fermentum commodo nulla.</p>
+                                <a href="#" class="text-uppercase tm-color-primary tm-font-semibold">Continue reading...</a>
+                            </div>
+                        </article>
+                        <article class="media tm-margin-b-20 tm-media-1">
+                            <img src="{{ asset('img/img-05.jpg') }}" alt="Image">
+                            <div class="media-body tm-media-body-1 tm-media-body-v-center">
+                                <h3 class="tm-font-semibold tm-article-title-3">Faucibus dolor ligula nisl metus auctor aliquet</h3>
+                                <p>Nunc in felis aliquet metus luctus iaculis vel et nisi. Nulla venenatis nisl orci, laoreet ultricies massa tristique id.</p>
+                                <a href="#" class="text-uppercase tm-color-primary tm-font-semibold">Continue reading...</a>
+                            </div>
+                        </article>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</section>
-<!-- ***** Services Section End ***** -->
-
-<!-- ***** About Us Section Start ***** -->
-<section id="about" class="about-area section-padding">
-    <div class="container">
-        <div class="row">
-            <div class="col-12 text-center">
-                <h2 class="section-title">About Us</h2>
-                <p class="section-description">Learn more about our mission and vision as we work to help businesses scale effortlessly.</p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-6">
-                <p class="about-text">At Chain App Dev, we specialize in developing cutting-edge mobile and web applications. Our team consists of experienced designers and developers who work collaboratively to provide the best digital solutions to our clients. Whether you're looking to build a brand new app or improve an existing one, we have the expertise to make your project a success.</p>
-            </div>
-            <div class="col-lg-6">
-                <img src="{{ asset('assets/images/about-us.jpg') }}" alt="About Us Image" class="img-fluid">
-            </div>
-        </div>
-    </div>
-</section>
-<!-- ***** About Us Section End ***** -->
-
-@endsection
+</div>

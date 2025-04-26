@@ -1,3 +1,14 @@
+@include('theme.header')
+
+@include('theme.home')
+
+@include('theme.about')
+
+@include('theme.services')
+
+@include('theme.pricing')
+
+@include('theme.footer')
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>

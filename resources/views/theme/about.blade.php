@@ -1,80 +1,105 @@
-@extends('layouts.app')
-
-@section('content')
-<!-- ***** Services Section Start ***** -->
-<section id="services" class="services section">
+<div class="tm-section tm-section-pad tm-bg-gray" id="tm-section-4">
     <div class="container">
         <div class="row">
-            <div class="col-12 text-center">
-                <h2 class="section-title">About Us</h2>
-                <p class="section-description">We offer a variety of services to help you succeed in the digital world.</p>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-lg-6">
-                <p class="about-text">
-                    At Chain App Dev, we specialize in developing high-quality mobile and web applications. Our mission is to help businesses grow by creating innovative solutions that are easy to use and impactful. 
-                    Our team of designers, developers, and strategists work together to ensure that your project is a success.
-                </p>
-                <p>
-                    Whether you're looking for a mobile app, a responsive website, or an enterprise-level application, we have the skills and expertise to make it happen.
-                </p>
-            </div>
-            <div class="col-lg-6">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpqJeMMJKQ0KzoJGDcVUbSP2PvBd8Ik85tiA&s"  alt="About Us Image" class="img-fluid">
-            </div>
-        </div>
-
-        <div class="row mt-5">
-            <div class="col-12 text-center">
-                <h3 class="team-title">Meet Our Team</h3>
-            </div>
-            <div class="col-lg-4 col-md-6 text-center">
-                <div class="team-member">
-                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGVyc29ufGVufDB8fDB8fHww" alt="Team Member" class="img-fluid">
-                    <h4>John Doe</h4>
-                    <p>CEO & Founder</p>
+            <div class="col-sm-12 col-md-12 col-lg-8 col-xl-8">
+                <div class="tm-article-carousel">
+                    <article class="tm-bg-white mr-2 tm-carousel-item">
+                        <img src="{{ asset('img/img-01.jpg') }}" alt="Image" class="img-fluid">
+                        <div class="tm-article-pad">
+                            <header>
+                                <h3 class="text-uppercase tm-article-title-2">Nunc in felis aliquet metus luctus iaculis</h3>
+                            </header>
+                            <p>Aliquam ac lacus volutpat, dictum risus at, scelerisque nulla. Nullam sollicitudin at augue venenatis eleifend.</p>
+                            <a href="#" class="text-uppercase btn-primary tm-btn-primary">Get More Info.</a>
+                        </div>
+                    </article>
+                    <article class="tm-bg-white mr-2 tm-carousel-item">
+                        <img src="{{ asset('img/img-02.jpg') }}" alt="Image" class="img-fluid">
+                        <div class="tm-article-pad">
+                            <header>
+                                <h3 class="text-uppercase tm-article-title-2">Sed cursus dictum nunc quis molestie</h3>
+                            </header>
+                            <p>Pellentesque quis dui sit amet purus scelerisque eleifend sed ut eros. Morbi viverra blandit massa in varius.</p>
+                            <a href="#" class="text-uppercase btn-primary tm-btn-primary">View Detail</a>
+                        </div>
+                    </article>
+                    <article class="tm-bg-white mr-2 tm-carousel-item">
+                        <img src="{{ asset('img/img-01.jpg') }}" alt="Image" class="img-fluid">
+                        <div class="tm-article-pad">
+                            <header>
+                                <h3 class="text-uppercase tm-article-title-2">Eget diam pellentesque interdum ut porta</h3>
+                            </header>
+                            <p>Aenean finibus tempor nulla, et maximus nibh dapibus ac. Duis consequat sed sapien venenatis consequat.</p>
+                            <a href="#" class="text-uppercase btn-primary tm-btn-primary">More Info.</a>
+                        </div>
+                    </article>
+                    <article class="tm-bg-white mr-2 tm-carousel-item">
+                        <img src="{{ asset('img/img-02.jpg') }}" alt="Image" class="img-fluid">
+                        <div class="tm-article-pad">
+                            <header>
+                                <h3 class="text-uppercase tm-article-title-2">Lorem ipsum dolor sit amet, consectetur</h3>
+                            </header>
+                            <p>Suspendisse molestie sed dui eget faucibus. Duis accumsan sagittis tortor in ultrices.</p>
+                            <a href="#" class="text-uppercase btn-primary tm-btn-primary">Detail Info.</a>
+                        </div>
+                    </article>
+                    <article class="tm-bg-white mr-2 tm-carousel-item">
+                        <img src="{{ asset('img/img-01.jpg') }}" alt="Image" class="img-fluid">
+                        <div class="tm-article-pad">
+                            <header>
+                                <h3 class="text-uppercase tm-article-title-2">Orci varius natoque penatibus et</h3>
+                            </header>
+                            <p>Pellentesque quis dui sit amet purus scelerisque eleifend sed ut eros. Morbi viverra blandit massa in varius.</p>
+                            <a href="#" class="text-uppercase btn-primary tm-btn-primary">Read More</a>
+                        </div>
+                    </article>
+                    <article class="tm-bg-white tm-carousel-item">
+                        <img src="{{ asset('img/img-02.jpg') }}" alt="Image" class="img-fluid">
+                        <div class="tm-article-pad">
+                            <header>
+                                <h3 class="text-uppercase tm-article-title-2">Nullam sollicitudin at augue venenatis eleifend</h3>
+                            </header>
+                            <p>Aenean finibus tempor nulla, et maximus nibh dapibus ac. Duis consequat sed sapien venenatis consequat.</p>
+                            <a href="#" class="text-uppercase btn-primary tm-btn-primary">More Details</a>
+                        </div>
+                    </article>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6 text-center">
-                <div class="team-member">
-                    <img src="https://us.123rf.com/450wm/dekazigzag/dekazigzag2108/dekazigzag210800026/172568501-close-up-photo-of-a-small-brunette-boy-looking-up-at-camera-while-playing-near-the-couch.jpg?ver=6 " >
-                    <h4>Jane Smith</h4>
-                    <p>Lead Developer</p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 text-center">
-                <div class="team-member">
-                    <img src="https://t3.ftcdn.net/jpg/02/43/12/34/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.webp" alt="Team Member" class="img-fluid">
-                    <h4>Robert Brown</h4>
-                    <p>Project Manager</p>
+
+            <div class="col-sm-12 col-md-12 col-lg-4 col-xl-4 tm-recommended-container">
+                <div class="tm-bg-white">
+                    <div class="tm-bg-primary tm-sidebar-pad">
+                        <h3 class="tm-color-white tm-sidebar-title">Recommended Places</h3>
+                        <p class="tm-color-white tm-margin-b-0 tm-font-light">Enamel pin cliche tilde, kitsch and VHS thundercats</p>
+                    </div>
+                    <div class="tm-sidebar-pad-2">
+                        <a href="#" class="media tm-media tm-recommended-item">
+                            <img src="{{ asset('img/tn-img-01.jpg') }}" alt="Image">
+                            <div class="media-body tm-media-body tm-bg-gray">
+                                <h4 class="text-uppercase tm-font-semibold tm-sidebar-item-title">Europe</h4>
+                            </div>
+                        </a>
+                        <a href="#" class="media tm-media tm-recommended-item">
+                            <img src="{{ asset('img/tn-img-02.jpg') }}" alt="Image">
+                            <div class="media-body tm-media-body tm-bg-gray">
+                                <h4 class="text-uppercase tm-font-semibold tm-sidebar-item-title">Asia</h4>
+                            </div>
+                        </a>
+                        <a href="#" class="media tm-media tm-recommended-item">
+                            <img src="{{ asset('img/tn-img-03.jpg') }}" alt="Image">
+                            <div class="media-body tm-media-body tm-bg-gray">
+                                <h4 class="text-uppercase tm-font-semibold tm-sidebar-item-title">Africa</h4>
+                            </div>
+                        </a>
+                        <a href="#" class="media tm-media tm-recommended-item">
+                            <img src="{{ asset('img/tn-img-04.jpg') }}" alt="Image">
+                            <div class="media-body tm-media-body tm-bg-gray">
+                                <h4 class="text-uppercase tm-font-semibold tm-sidebar-item-title">South America</h4>
+                            </div>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</section>
-<!-- ***** Services Section End ***** -->
-
-<!-- ***** About Us Section Start ***** -->
-<section id="about" class="about-area section-padding">
-    <div class="container">
-        <div class="row">
-            <div class="col-12 text-center">
-                <h2 class="section-title">About Us</h2>
-                <p class="section-description">Learn more about our mission and vision as we work to help businesses scale effortlessly.</p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-6">
-                <p class="about-text">At Chain App Dev, we specialize in developing cutting-edge mobile and web applications. Our team consists of experienced designers and developers who work collaboratively to provide the best digital solutions to our clients. Whether you're looking to build a brand new app or improve an existing one, we have the expertise to make your project a success.</p>
-            </div>
-            <div class="col-lg-6">
-                <img src="{{ asset('assets/images/about-us.jpg') }}" alt="About Us Image" class="img-fluid">
-            </div>
-        </div>
-    </div>
-</section>
-<!-- ***** About Us Section End ***** -->
-
-@endsection
+</div>

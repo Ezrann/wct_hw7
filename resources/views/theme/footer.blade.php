@@ -1,77 +1,143 @@
-<footer id="newsletter">
+<footer class="tm-bg-dark-blue">
     <div class="container">
         <div class="row">
-            <div class="col-lg-8 offset-lg-2">
-                <div class="section-heading">
-                    <h4>Join our mailing list to receive the news &amp; latest trends</h4>
-                </div>
-            </div>
-            <div class="col-lg-6 offset-lg-3">
-                <form id="search" action="#" method="GET">
-                    <div class="row">
-                        <div class="col-lg-6 col-sm-6">
-                            <fieldset>
-                                <input type="email" name="address" class="email" placeholder="Email Address..." autocomplete="on" required>
-                            </fieldset>
-                        </div>
-                        <div class="col-lg-6 col-sm-6">
-                            <fieldset>
-                                <button type="submit" class="main-button">Subscribe Now <i class="fa fa-angle-right"></i></button>
-                            </fieldset>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-3">
-                <div class="footer-widget">
-                    <h4>Contact Us</h4>
-                    <p>Rio de Janeiro - RJ, 22795-008, Brazil</p>
-                    <p><a href="#">010-020-0340</a></p>
-                    <p><a href="#">info@company.co</a></p>
-                </div>
-            </div>
-            <div class="col-lg-3">
-                <div class="footer-widget">
-                    <h4>About Us</h4>
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Testimonials</a></li>
-                        <li><a href="#">Pricing</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-lg-3">
-                <div class="footer-widget">
-                    <h4>Useful Links</h4>
-                    <ul>
-                        <li><a href="#">Free Apps</a></li>
-                        <li><a href="#">App Engine</a></li>
-                        <li><a href="#">Programming</a></li>
-                        <li><a href="#">Development</a></li>
-                        <li><a href="#">App News</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-lg-3">
-                <div class="footer-widget">
-                    <h4>About Our Company</h4>
-                    <div class="logo">
-                        <img src="{{ asset('assets/images/white-logo.png') }}" alt="">
-                    </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-12">
-            <div class="copyright-text">
-                <p>Copyright © 2022 Chain App Dev Company. All Rights Reserved. 
-                    <br>Design: <a href="https://templatemo.com/" target="_blank" title="css templates">TemplateMo</a>
-                </p>
-            </div>
+            <p class="col-sm-12 text-center tm-font-light tm-color-white p-4 tm-margin-b-0">
+                Copyright © <span class="tm-current-year">{{ date('Y') }}</span> Your Company
+                - Design: <a rel="nofollow" href="https://www.tooplate.com" class="tm-color-primary tm-font-normal" target="_parent">Tooplate</a>
+            </p>
         </div>
     </div>
 </footer>
+</div>
+
+<!-- load JS files -->
+<script src="{{ asset('js/jquery-1.11.3.min.js') }}"></script>
+<script src="{{ asset('js/popper.min.js') }}"></script>
+<script src="{{ asset('js/bootstrap.min.js') }}"></script>
+<script src="{{ asset('js/datepicker.min.js') }}"></script>
+<script src="{{ asset('js/jquery.singlePageNav.min.js') }}"></script>
+<script src="{{ asset('slick/slick.min.js') }}"></script>
+<script>
+    /* Google map */
+    var map = '';
+    var center;
+
+    function initialize() {
+        var mapOptions = {
+            zoom: 13,
+            center: new google.maps.LatLng(-23.013104, -43.394365),
+            scrollwheel: false
+        };
+
+        map = new google.maps.Map(document.getElementById('google-map'), mapOptions);
+
+        google.maps.event.addDomListener(map, 'idle', function() {
+            calculateCenter();
+        });
+
+        google.maps.event.addDomListener(window, 'resize', function() {
+            map.setCenter(center);
+        });
+    }
+
+    function calculateCenter() {
+        center = map.getCenter();
+    }
+
+    function loadGoogleMap() {
+        var script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDVWt4rJfibfsEDvcuaChUaZRS5NXey1Cs&v=3.exp&sensor=false&callback=initialize';
+        document.body.appendChild(script);
+    }
+
+    function setCarousel() {
+        if ($('.tm-article-carousel').hasClass('slick-initialized')) {
+            $('.tm-article-carousel').slick('destroy');
+        }
+
+        if ($(window).width() < 438) {
+            $('.tm-article-carousel').slick({
+                infinite: false,
+                dots: true,
+                slidesToShow: 1,
+                slidesToScroll: 1
+            });
+        } else {
+            $('.tm-article-carousel').slick({
+                infinite: false,
+                dots: true,
+                slidesToShow: 2,
+                slidesToScroll: 1
+            });
+        }
+    }
+
+    function setPageNav() {
+        if ($(window).width() > 991) {
+            $('#tm-top-bar').singlePageNav({
+                currentClass: 'active',
+                offset: 79
+            });
+        } else {
+            $('#tm-top-bar').singlePageNav({
+                currentClass: 'active',
+                offset: 65
+            });
+        }
+    }
+
+    function togglePlayPause() {
+        vid = $('.tmVideo').get(0);
+
+        if (vid.paused) {
+            vid.play();
+            $('.tm-btn-play').hide();
+            $('.tm-btn-pause').show();
+        } else {
+            vid.pause();
+            $('.tm-btn-play').show();
+            $('.tm-btn-pause').hide();
+        }
+    }
+
+    $(document).ready(function() {
+        $(window).on("scroll", function() {
+            if ($(window).scrollTop() > 100) {
+                $(".tm-top-bar").addClass("active");
+            } else {
+                $(".tm-top-bar").removeClass("active");
+            }
+        });
+
+        loadGoogleMap();
+
+        const pickerCheckIn = datepicker('#inputCheckIn');
+        const pickerCheckOut = datepicker('#inputCheckOut');
+
+        setCarousel();
+        setPageNav();
+
+        $(window).resize(function() {
+            setCarousel();
+            setPageNav();
+        });
+
+        $('.nav-link').click(function() {
+            $('#mainNav').removeClass('show');
+        });
+
+        $('.tm-btn-play').click(function() {
+            togglePlayPause();
+        });
+
+        $('.tm-btn-pause').click(function() {
+            togglePlayPause();
+        });
+
+        $('.tm-current-year').text(new Date().getFullYear());
+    });
+</script>
+</body>
+
+</html>
