@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container ">
-    <div class="row justify-content-center align-items-center vh-100   mt-5">
+<div class="container">
+    <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">{{ __('Login') }}</div>
@@ -66,7 +66,6 @@
                         </div>
                     </form>
                 </div>
-                <!-- <p>fjfdfjjfg</p> -->
             </div>
         </div>
     </div>
